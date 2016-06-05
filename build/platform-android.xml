@@ -1,0 +1,7 @@
+<platform xmlns="http://ns.adobe.com/air/extension/19.0">
+
+    <packagedDependencies>
+        <packagedDependency>gameanalytics.jar</packagedDependency>
+    </packagedDependencies>
+
+</platform>

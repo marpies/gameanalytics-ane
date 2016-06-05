@@ -1,0 +1,33 @@
+<extension xmlns="http://ns.adobe.com/air/extension/19.0">
+  <id>com.marpies.ane.gameanalytics</id>
+  <versionNumber>1</versionNumber>
+  <platforms>
+    <platform name="iPhone-ARM">
+        <applicationDeployment>
+            <nativeLibrary>libGameAnalytics.a</nativeLibrary>
+            <initializer>GameAnalyticsInitializer</initializer>
+            <finalizer>GameAnalyticsFinalizer</finalizer>
+        </applicationDeployment>
+    </platform>
+
+    <platform name="Android-ARM">
+        <applicationDeployment>
+            <nativeLibrary>libGameAnalytics.jar</nativeLibrary>
+            <initializer>com.marpies.ane.gameanalytics.GameAnalyticsExtension</initializer>
+            <finalizer>com.marpies.ane.gameanalytics.GameAnalyticsExtension</finalizer>
+        </applicationDeployment>
+    </platform>
+
+    <platform name="Android-x86">
+        <applicationDeployment>
+            <nativeLibrary>libGameAnalytics.jar</nativeLibrary>
+            <initializer>com.marpies.ane.gameanalytics.GameAnalyticsExtension</initializer>
+            <finalizer>com.marpies.ane.gameanalytics.GameAnalyticsExtension</finalizer>
+        </applicationDeployment>
+    </platform>
+
+    <platform name="default">
+        <applicationDeployment/>
+    </platform>
+  </platforms>
+</extension>
