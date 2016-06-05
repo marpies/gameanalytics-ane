@@ -55,7 +55,7 @@ Modify the `manifestAdditions` so that it contains the following permissions and
 
 **Note:** the extension requires AIR SDK 19 or newer. However, official [GA docs](https://guides.gameanalytics.com/content/sdk?page=android&step=2) mention the APK should target Android API 23. As far as I know the latest version of Android SDK packaged with AIR is 21 (part of AIR SDK 20+). I haven't had a chance to properly test the extension on Android using AIR SDK 21 or older.
 
-After your descriptor is set up, add the `GameAnalytics.ane` package from the *bin* directory to your project so that your IDE can work with it. The Google Play Services ANEs are only necessary during packaging.
+After your descriptor is set up, add the GameAnalytics ANE package from the *bin* directory to your project so that your IDE can work with it. The Google Play Services ANEs are only necessary during packaging.
 
 ## API overview
 
