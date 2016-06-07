@@ -66,7 +66,7 @@ The extension exposes most of the native APIs and for the most part you do not n
 There are some values that must be set before the analytics can be intialized, like app build and game's key/secret.
 
 ```as3
-// Required values (must be set)
+// Required values (at least 1 platform must be set)
 GameAnalytics.config
     // iOS specific
     .setBuildiOS( "0.6.14")
