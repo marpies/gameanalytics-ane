@@ -238,7 +238,8 @@ package com.marpies.ane.gameanalytics {
          * @private
          */
         public function get isValid():Boolean {
-            return (mBuildiOS !== null) && (((mGameKeyiOS !== null) && (mGameSecretiOS !== null)) || ((mGameKeyAndroid !== null) && (mGameSecretAndroid !== null)));
+            return ((mBuildiOS !== null) && (mGameKeyiOS !== null) && (mGameSecretiOS !== null)) ||
+                    ((mBuildAndroid !== null) && (mGameKeyAndroid !== null) && (mGameSecretAndroid !== null));
         }
 
     }
