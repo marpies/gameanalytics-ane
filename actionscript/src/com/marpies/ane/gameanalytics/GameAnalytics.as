@@ -33,7 +33,7 @@ package com.marpies.ane.gameanalytics {
         private static const EXTENSION_ID:String = "com.marpies.ane.gameanalytics";
 
         private static var mContext:ExtensionContext;
-        
+
         /* Config */
         private static const CONFIG:GameAnalyticsConfig = new GameAnalyticsConfig();
 
@@ -60,7 +60,7 @@ package com.marpies.ane.gameanalytics {
 
         /**
          * Initializes extension context and GameAnalytics native library.
-         * 
+         *
          * @return <code>true</code> if the analytics were successfully initialized, <code>false</code> otherwise.
          */
         public static function init():Boolean {
@@ -279,7 +279,7 @@ package com.marpies.ane.gameanalytics {
          * Version of the extension.
          */
         public static function get version():String {
-            return "1.0.1";
+            return "1.0.2";
         }
 
         /**
