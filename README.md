@@ -170,6 +170,10 @@ The README contains information that was taken directly from [the GA docs](http:
 
 ## Change log
 
+#### July 19, 2016 (v1.0.2)
+
+* UPDATED AIRExtHelpers.framework for compatibility with other ANEs
+
 #### June 9, 2016 (v1.0.1)
 
 * UPDATED iOS framework deploy target to iOS 7.0, FIXED incorrect init conditional checks
