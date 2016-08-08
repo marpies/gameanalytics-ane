@@ -179,7 +179,7 @@ The README contains information that was taken directly from [the GA docs](http:
 
 * UPDATED GameAnalytics iOS and Android SDKs
 * ADDED `advertisingId` and `isLimitedAdTracking` APIs
-* ADDED prefix to iOS functions to minimalize chance of duplicate symbol errors
+* ADDED prefix to iOS functions to minimize chance of duplicate symbol errors
 
 #### July 19, 2016 (v1.0.2)
 
