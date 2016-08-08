@@ -2,6 +2,11 @@
 
 ActionScript 3 API for the [GameAnalytics](http://www.gameanalytics.com/) native libraries.
 
+## Native SDK versions
+
+* iOS `v2.2.2`
+* Android `v3.3.0`
+
 ## Getting started
 
 Create a game in the [GA dashboard](https://go.gameanalytics.com/home). Each platform has a separate game in the dashboard. That means you will have a different pair of key and secret for iOS and Android.
@@ -36,8 +41,6 @@ Modify the `manifestAdditions` so that it contains the following permissions and
         <manifest android:installLocation="auto">
             <uses-permission android:name="android.permission.INTERNET" />
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="18" />
 
             <uses-sdk android:targetSdkVersion="23" />
 
@@ -53,9 +56,11 @@ Modify the `manifestAdditions` so that it contains the following permissions and
 </android>
 ```
 
-**Note:** the extension requires AIR SDK 19 or newer. However, official [GA docs](https://guides.gameanalytics.com/content/sdk?page=android&step=2) mention the APK should target Android API 23. As far as I know the latest version of Android SDK packaged with AIR is 21 (part of AIR SDK 20+). I haven't had a chance to properly test the extension on Android using AIR SDK 21 or older.
-
 After your descriptor is set up, add the GameAnalytics ANE package from the *bin* directory to your project so that your IDE can work with it. The Google Play Services ANEs are only necessary during packaging.
+
+### Important: iOS app submission
+
+The GA SDK for iOS uses *Advertising Identifier (IDFA)*. Make sure to read [this guide](http://www.gameanalytics.com/docs/ios-guide-for-app-submission) when submitting the app to the *App Store* to avoid rejection.
 
 ## API overview
 
@@ -168,7 +173,13 @@ The ANE has been written by [Marcel Piestansky](https://twitter.com/marpies) and
 
 The README contains information that was taken directly from [the GA docs](http://www.gameanalytics.com/docs).
 
-## Change log
+## Changelog
+
+#### August 8, 2016 (v1.1.0)
+
+* UPDATED GameAnalytics iOS and Android SDKs
+* ADDED `advertisingId` and `isLimitedAdTracking` APIs
+* ADDED prefix to iOS functions to minimalize chance of duplicate symbol errors
 
 #### July 19, 2016 (v1.0.2)
 
