@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C3073AE81BE2C77C00EC89B7 /* InitFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C3073AE21BE2C77C00EC89B7 /* InitFunction.m */; };
+		C3247E9A1D58ABAC00E01DF8 /* GetAdvertisingIdFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C3247E991D58ABAC00E01DF8 /* GetAdvertisingIdFunction.m */; };
+		C3247E9D1D58AF0E00E01DF8 /* GetLimitedAdTrackingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C3247E9C1D58AF0E00E01DF8 /* GetLimitedAdTrackingFunction.m */; };
+		C3247EA01D58B2E200E01DF8 /* libGameAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3247E9F1D58B2E200E01DF8 /* libGameAnalytics.a */; };
 		C32C95BF1D02D7430014C335 /* AIRGameAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = C32C95BE1D02D7430014C335 /* AIRGameAnalytics.m */; };
 		C32C95C41D02D8CE0014C335 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32C95C21D02D8CE0014C335 /* AdSupport.framework */; };
 		C32C95C51D02D8CE0014C335 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32C95C31D02D8CE0014C335 /* SystemConfiguration.framework */; };
-		C32C95CE1D030DEF0014C335 /* libGA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C32C95CD1D030DEF0014C335 /* libGA.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		C32C95D21D0313F30014C335 /* GameAnalyticsConfigHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C32C95D11D0313F30014C335 /* GameAnalyticsConfigHelper.m */; };
 		C32C95D51D032C990014C335 /* AddResourceEventFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C32C95D41D032C990014C335 /* AddResourceEventFunction.m */; };
 		C32C95D81D032F0C0014C335 /* AddProgressionEventFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C32C95D71D032F0C0014C335 /* AddProgressionEventFunction.m */; };
@@ -38,12 +40,16 @@
 /* Begin PBXFileReference section */
 		C3073AE11BE2C77C00EC89B7 /* InitFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitFunction.h; sourceTree = "<group>"; };
 		C3073AE21BE2C77C00EC89B7 /* InitFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitFunction.m; sourceTree = "<group>"; };
+		C3247E981D58ABAC00E01DF8 /* GetAdvertisingIdFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetAdvertisingIdFunction.h; sourceTree = "<group>"; };
+		C3247E991D58ABAC00E01DF8 /* GetAdvertisingIdFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetAdvertisingIdFunction.m; sourceTree = "<group>"; };
+		C3247E9B1D58AF0E00E01DF8 /* GetLimitedAdTrackingFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLimitedAdTrackingFunction.h; sourceTree = "<group>"; };
+		C3247E9C1D58AF0E00E01DF8 /* GetLimitedAdTrackingFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetLimitedAdTrackingFunction.m; sourceTree = "<group>"; };
+		C3247E9E1D58B2E200E01DF8 /* GameAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameAnalytics.h; sourceTree = "<group>"; };
+		C3247E9F1D58B2E200E01DF8 /* libGameAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGameAnalytics.a; sourceTree = "<group>"; };
 		C32C95BD1D02D7430014C335 /* AIRGameAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIRGameAnalytics.h; sourceTree = "<group>"; };
 		C32C95BE1D02D7430014C335 /* AIRGameAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIRGameAnalytics.m; sourceTree = "<group>"; };
 		C32C95C21D02D8CE0014C335 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		C32C95C31D02D8CE0014C335 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		C32C95CA1D030DA00014C335 /* GameAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameAnalytics.h; sourceTree = "<group>"; };
-		C32C95CD1D030DEF0014C335 /* libGA.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGA.a; sourceTree = "<group>"; };
 		C32C95D01D0313F30014C335 /* GameAnalyticsConfigHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameAnalyticsConfigHelper.h; path = Utils/GameAnalyticsConfigHelper.h; sourceTree = "<group>"; };
 		C32C95D11D0313F30014C335 /* GameAnalyticsConfigHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameAnalyticsConfigHelper.m; path = Utils/GameAnalyticsConfigHelper.m; sourceTree = "<group>"; };
 		C32C95D31D032C990014C335 /* AddResourceEventFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddResourceEventFunction.h; sourceTree = "<group>"; };
@@ -68,8 +74,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32C95C41D02D8CE0014C335 /* AdSupport.framework in Frameworks */,
-				C32C95CE1D030DEF0014C335 /* libGA.a in Frameworks */,
 				C32C95C51D02D8CE0014C335 /* SystemConfiguration.framework in Frameworks */,
+				C3247EA01D58B2E200E01DF8 /* libGameAnalytics.a in Frameworks */,
 				C37509FA1C79388900516C15 /* AIRExtHelpers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +120,10 @@
 				C3E1230C1D042B4F000ED3D4 /* SetDimensionFunction.m */,
 				C3073AE11BE2C77C00EC89B7 /* InitFunction.h */,
 				C3073AE21BE2C77C00EC89B7 /* InitFunction.m */,
+				C3247E981D58ABAC00E01DF8 /* GetAdvertisingIdFunction.h */,
+				C3247E991D58ABAC00E01DF8 /* GetAdvertisingIdFunction.m */,
+				C3247E9B1D58AF0E00E01DF8 /* GetLimitedAdTrackingFunction.h */,
+				C3247E9C1D58AF0E00E01DF8 /* GetLimitedAdTrackingFunction.m */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -148,8 +158,8 @@
 		C37509F81C79388900516C15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C32C95CD1D030DEF0014C335 /* libGA.a */,
-				C32C95CA1D030DA00014C335 /* GameAnalytics.h */,
+				C3247E9E1D58B2E200E01DF8 /* GameAnalytics.h */,
+				C3247E9F1D58B2E200E01DF8 /* libGameAnalytics.a */,
 				C37509F91C79388900516C15 /* AIRExtHelpers.framework */,
 			);
 			path = Frameworks;
@@ -213,11 +223,13 @@
 			files = (
 				C32C95D21D0313F30014C335 /* GameAnalyticsConfigHelper.m in Sources */,
 				C3073AE81BE2C77C00EC89B7 /* InitFunction.m in Sources */,
+				C3247E9A1D58ABAC00E01DF8 /* GetAdvertisingIdFunction.m in Sources */,
 				C3E1230D1D042B4F000ED3D4 /* SetDimensionFunction.m in Sources */,
 				C32C95E11D0336E60014C335 /* AddBusinessEventFunction.m in Sources */,
 				C32C95D81D032F0C0014C335 /* AddProgressionEventFunction.m in Sources */,
 				C32C95D51D032C990014C335 /* AddResourceEventFunction.m in Sources */,
 				C32C95DB1D0331950014C335 /* AddDesignEventFunction.m in Sources */,
+				C3247E9D1D58AF0E00E01DF8 /* GetLimitedAdTrackingFunction.m in Sources */,
 				C32C95BF1D02D7430014C335 /* AIRGameAnalytics.m in Sources */,
 				C32C95DE1D0332F50014C335 /* AddErrorEventFunction.m in Sources */,
 			);

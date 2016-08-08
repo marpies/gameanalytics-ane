@@ -22,6 +22,8 @@
 #import "Functions/AddErrorEventFunction.h"
 #import "Functions/AddBusinessEventFunction.h"
 #import "Functions/SetDimensionFunction.h"
+#import "Functions/GetAdvertisingIdFunction.h"
+#import "Functions/GetLimitedAdTrackingFunction.h"
 
 static BOOL GALogEnabled = NO;
 FREContext GAExtensionContext = nil;
@@ -64,7 +66,9 @@ FRENamedFunction AIRGameAnalytics_extFunctions[] = {
     { (const uint8_t*) "addDesignEvent",       0, ga_addDesignEvent },
     { (const uint8_t*) "addErrorEvent",        0, ga_addErrorEvent },
     { (const uint8_t*) "addBusinessEvent",     0, ga_addBusinessEvent },
-    { (const uint8_t*) "setDimension",         0, ga_setDimension }
+    { (const uint8_t*) "setDimension",         0, ga_setDimension },
+    { (const uint8_t*) "getAdvertisingId",     0, ga_getAdvertisingId },
+    { (const uint8_t*) "getLimitedAdTracking", 0, ga_getLimitedAdTracking }
 };
 
 void GameAnalyticsContextInitializer( void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToSet, const FRENamedFunction** functionsToSet ) {
