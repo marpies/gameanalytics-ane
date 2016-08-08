@@ -37,6 +37,8 @@ public class GameAnalyticsExtensionContext extends FREContext {
 		functions.put( "addErrorEvent", new AddErrorEventFunction() );
 		functions.put( "addBusinessEvent", new AddBusinessEventFunction() );
 		functions.put( "setDimension", new SetDimensionFunction() );
+		functions.put( "getAdvertisingId", new GetAdvertisingIdFunction() );
+		functions.put( "getLimitedAdTracking", new GetLimitedAdTrackingFunction() );
 
 		return functions;
 	}
