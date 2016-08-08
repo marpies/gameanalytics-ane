@@ -18,7 +18,7 @@
 #import <AIRExtHelpers/MPFREObjectUtils.h>
 #import "GameAnalytics.h"
 
-GAProgressionStatus getProgressionStatus( int status ) {
+GAProgressionStatus ga_getProgressionStatus( int status ) {
     if( status == 2 ) {
         return GAProgressionStatusComplete;
     } else if( status == 1 ) {
@@ -27,8 +27,8 @@ GAProgressionStatus getProgressionStatus( int status ) {
     return GAProgressionStatusFail;
 }
 
-FREObject addProgressionEvent( FREContext context, void* functionData, uint32_t argc, FREObject argv[] ) {
-    GAProgressionStatus status = getProgressionStatus( [MPFREObjectUtils getInt:argv[0]] );
+FREObject ga_addProgressionEvent( FREContext context, void* functionData, uint32_t argc, FREObject argv[] ) {
+    GAProgressionStatus status = ga_getProgressionStatus( [MPFREObjectUtils getInt:argv[0]] );
     NSString* progression01 = [MPFREObjectUtils getNSString:argv[1]];
     NSString* progression02 = (argv[2] == nil) ? nil : [MPFREObjectUtils getNSString:argv[2]];
     NSString* progression03 = (argv[3] == nil) ? nil : [MPFREObjectUtils getNSString:argv[3]];

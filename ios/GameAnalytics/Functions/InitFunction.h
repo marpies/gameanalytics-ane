@@ -16,4 +16,4 @@
  
 #import <AIRExtHelpers/FlashRuntimeExtensions.h>
 
-FREObject init( FREContext context, void* functionData, uint32_t argc, FREObject argv[] );
+FREObject ga_init( FREContext context, void* functionData, uint32_t argc, FREObject argv[] );

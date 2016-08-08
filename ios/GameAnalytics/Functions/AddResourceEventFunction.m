@@ -18,15 +18,15 @@
 #import <AIRExtHelpers/MPFREObjectUtils.h>
 #import "GameAnalytics.h"
 
-GAResourceFlowType getFlowType( int flowType ) {
+GAResourceFlowType ga_getFlowType( int flowType ) {
     if( flowType == 1 ) {
         return GAResourceFlowTypeSource;
     }
     return GAResourceFlowTypeSink;
 }
 
-FREObject addResourceEvent( FREContext context, void* functionData, uint32_t argc, FREObject argv[] ) {
-    GAResourceFlowType flowType = getFlowType( [MPFREObjectUtils getInt:argv[0]] );
+FREObject ga_addResourceEvent( FREContext context, void* functionData, uint32_t argc, FREObject argv[] ) {
+    GAResourceFlowType flowType = ga_getFlowType( [MPFREObjectUtils getInt:argv[0]] );
     NSString* currency = [MPFREObjectUtils getNSString:argv[1]];
     double amount = [MPFREObjectUtils getDouble:argv[2]];
     NSString* itemType = [MPFREObjectUtils getNSString:argv[3]];

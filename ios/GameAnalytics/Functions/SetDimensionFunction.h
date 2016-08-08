@@ -16,4 +16,4 @@
 
 #import <AIRExtHelpers/FlashRuntimeExtensions.h>
 
-FREObject setDimension( FREContext context, void* functionData, uint32_t argc, FREObject argv[] );
+FREObject ga_setDimension( FREContext context, void* functionData, uint32_t argc, FREObject argv[] );

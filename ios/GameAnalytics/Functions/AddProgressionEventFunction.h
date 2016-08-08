@@ -16,4 +16,4 @@
 
 #import <AIRExtHelpers/FlashRuntimeExtensions.h>
 
-FREObject addProgressionEvent( FREContext context, void* functionData, uint32_t argc, FREObject argv[] );
+FREObject ga_addProgressionEvent( FREContext context, void* functionData, uint32_t argc, FREObject argv[] );

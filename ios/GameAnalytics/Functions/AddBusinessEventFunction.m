@@ -18,7 +18,7 @@
 #import <AIRExtHelpers/MPFREObjectUtils.h>
 #import "GameAnalytics.h"
 
-FREObject addBusinessEvent( FREContext context, void* functionData, uint32_t argc, FREObject argv[] ) {
+FREObject ga_addBusinessEvent( FREContext context, void* functionData, uint32_t argc, FREObject argv[] ) {
     NSString* currency = [MPFREObjectUtils getNSString:argv[0]];
     int amount = [MPFREObjectUtils getInt:argv[1]];
     NSString* itemType = [MPFREObjectUtils getNSString:argv[2]];

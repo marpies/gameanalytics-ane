@@ -57,33 +57,20 @@ FREContext GAExtensionContext = nil;
  *
  **/
 
-void GameAnalyticsAddFunction( FRENamedFunction* array, const char* name, FREFunction function, uint32_t* index ) {
-    array[(*index)].name = (const uint8_t*) name;
-    array[(*index)].functionData = NULL;
-    array[(*index)].function = function;
-    (*index)++;
-}
+FRENamedFunction AIRGameAnalytics_extFunctions[] = {
+    { (const uint8_t*) "init",                 0, ga_init },
+    { (const uint8_t*) "addResourceEvent",     0, ga_addResourceEvent },
+    { (const uint8_t*) "addProgressionEvent",  0, ga_addProgressionEvent },
+    { (const uint8_t*) "addDesignEvent",       0, ga_addDesignEvent },
+    { (const uint8_t*) "addErrorEvent",        0, ga_addErrorEvent },
+    { (const uint8_t*) "addBusinessEvent",     0, ga_addBusinessEvent },
+    { (const uint8_t*) "setDimension",         0, ga_setDimension }
+};
 
-void GameAnalyticsContextInitializer( void* extData,
-                                  const uint8_t* ctxType,
-                                  FREContext ctx,
-                                  uint32_t* numFunctionsToSet,
-                                  const FRENamedFunction** functionsToSet ) {
-    uint32_t numFunctions = 7;
-    *numFunctionsToSet = numFunctions;
+void GameAnalyticsContextInitializer( void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToSet, const FRENamedFunction** functionsToSet ) {
+    *numFunctionsToSet = sizeof( AIRGameAnalytics_extFunctions ) / sizeof( FRENamedFunction );
     
-    FRENamedFunction* functionArray = (FRENamedFunction*) malloc( sizeof( FRENamedFunction ) * numFunctions );
-    
-    uint32_t index = 0;
-    GameAnalyticsAddFunction( functionArray, "init", &init, &index );
-    GameAnalyticsAddFunction( functionArray, "addResourceEvent", &addResourceEvent, &index );
-    GameAnalyticsAddFunction( functionArray, "addProgressionEvent", &addProgressionEvent, &index );
-    GameAnalyticsAddFunction( functionArray, "addDesignEvent", &addDesignEvent, &index );
-    GameAnalyticsAddFunction( functionArray, "addErrorEvent", &addErrorEvent, &index );
-    GameAnalyticsAddFunction( functionArray, "addBusinessEvent", &addBusinessEvent, &index );
-    GameAnalyticsAddFunction( functionArray, "setDimension", &setDimension, &index );
-    
-    *functionsToSet = functionArray;
+    *functionsToSet = AIRGameAnalytics_extFunctions;
     
     GAExtensionContext = ctx;
 }

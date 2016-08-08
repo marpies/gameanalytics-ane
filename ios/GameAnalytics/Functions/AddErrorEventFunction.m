@@ -18,7 +18,7 @@
 #import <AIRExtHelpers/MPFREObjectUtils.h>
 #import "GameAnalytics.h"
 
-GAErrorSeverity getErrorSeverity( int severity ) {
+GAErrorSeverity ga_getErrorSeverity( int severity ) {
     switch( severity ) {
         case 1:
             return GAErrorSeverityDebug;
@@ -33,8 +33,8 @@ GAErrorSeverity getErrorSeverity( int severity ) {
     }
 }
 
-FREObject addErrorEvent( FREContext context, void* functionData, uint32_t argc, FREObject argv[] ) {
-    GAErrorSeverity severity = getErrorSeverity( [MPFREObjectUtils getInt:argv[0]] );
+FREObject ga_addErrorEvent( FREContext context, void* functionData, uint32_t argc, FREObject argv[] ) {
+    GAErrorSeverity severity = ga_getErrorSeverity( [MPFREObjectUtils getInt:argv[0]] );
     NSString* message = (argv[1] == nil) ? nil : [MPFREObjectUtils getNSString:argv[1]];
     
     [GameAnalytics addErrorEventWithSeverity:severity message:message];

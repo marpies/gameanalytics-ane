@@ -16,4 +16,4 @@
 
 #import <AIRExtHelpers/FlashRuntimeExtensions.h>
 
-FREObject addBusinessEvent( FREContext context, void* functionData, uint32_t argc, FREObject argv[] );
+FREObject ga_addBusinessEvent( FREContext context, void* functionData, uint32_t argc, FREObject argv[] );

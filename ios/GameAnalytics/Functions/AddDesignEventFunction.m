@@ -18,7 +18,7 @@
 #import <AIRExtHelpers/MPFREObjectUtils.h>
 #import "GameAnalytics.h"
 
-FREObject addDesignEvent( FREContext context, void* functionData, uint32_t argc, FREObject argv[] ) {
+FREObject ga_addDesignEvent( FREContext context, void* functionData, uint32_t argc, FREObject argv[] ) {
     NSString* eventId = [MPFREObjectUtils getNSString:argv[0]];
     double value = [MPFREObjectUtils getDouble:argv[1]];
     

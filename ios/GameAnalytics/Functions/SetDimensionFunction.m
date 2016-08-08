@@ -18,7 +18,7 @@
 #import <AIRExtHelpers/MPFREObjectUtils.h>
 #import "GameAnalytics.h"
 
-FREObject setDimension( FREContext context, void* functionData, uint32_t argc, FREObject argv[] ) {
+FREObject ga_setDimension( FREContext context, void* functionData, uint32_t argc, FREObject argv[] ) {
     NSString* value = (argv[0] == nil) ? nil : [MPFREObjectUtils getNSString:argv[0]];
     int dimension = [MPFREObjectUtils getInt:argv[1]];
     
