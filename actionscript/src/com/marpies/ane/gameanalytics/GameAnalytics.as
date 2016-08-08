@@ -112,7 +112,7 @@ package com.marpies.ane.gameanalytics {
          */
         public static function addResourceEvent( flowType:int, currency:String, amount:Number, itemType:String, itemId:String ):void {
             if( !isSupported ) return;
-            if( !mInitialized ) return;
+            validateExtensionContext();
 
             if( !GAResourceFlowType.isValid( flowType ) ) throw new ArgumentError( "Parameter flowType must be one of the values defined in class GAResourceFlowType." );
 
@@ -135,7 +135,7 @@ package com.marpies.ane.gameanalytics {
          */
         public static function addProgressionEvent( status:int, progression01:String, progression02:String = null, progression03:String = null, score:int = 0 ):void {
             if( !isSupported ) return;
-            if( !mInitialized ) return;
+            validateExtensionContext();
 
             if( !GAProgressionStatus.isValid( status ) ) throw new ArgumentError( "Parameter status must be one of the values defined in class GAProgressionStatus." );
 
@@ -156,7 +156,7 @@ package com.marpies.ane.gameanalytics {
          */
         public static function addDesignEvent( eventId:String, value:Number = 0 ):void {
             if( !isSupported ) return;
-            if( !mInitialized ) return;
+            validateExtensionContext();
 
             if( eventId === null ) throw new ArgumentError( "Parameter eventId cannot be null." );
 
@@ -174,7 +174,7 @@ package com.marpies.ane.gameanalytics {
          */
         public static function addErrorEvent( severity:int, message:String = null ):void {
             if( !isSupported ) return;
-            if( !mInitialized ) return;
+            validateExtensionContext();
 
             if( !GAErrorSeverity.isValid( severity ) ) throw new ArgumentError( "Parameter severity must be one of the values defined in class GAErrorSeverity." );
 
@@ -203,7 +203,7 @@ package com.marpies.ane.gameanalytics {
          */
         public static function addBusinessEvent( currency:String, amount:int, itemType:String, itemId:String, cartType:String, receipt:String = null, signature:String = null, autoFetchReceipt:Boolean = true ):void {
             if( !isSupported ) return;
-            if( !mInitialized ) return;
+            validateExtensionContext();
 
             if( currency === null ) throw new ArgumentError( "Parameter currency cannot be null." );
             if( itemType === null ) throw new ArgumentError( "Parameter itemType cannot be null." );
@@ -306,9 +306,13 @@ package com.marpies.ane.gameanalytics {
 
         private static function setDimensionInternal( value:String, dimension:int ):void {
             if( !isSupported ) return;
-            if( !mInitialized ) return;
+            validateExtensionContext();
 
             mContext.call( "setDimension", value, dimension );
+        }
+
+        private static function validateExtensionContext():void {
+            if( !mInitialized ) throw new Error( "GameAnalytics extension was not initialized. Call init() first." );
         }
 
         private static function log( message:String ):void {
