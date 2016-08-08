@@ -276,6 +276,30 @@ package com.marpies.ane.gameanalytics {
         }
 
         /**
+         * Retrives user's advertising id.
+         *
+         * <p>The value may be <code>null</code> on iOS (after the device has been restarted but
+         * before the user has unlocked the device) and Android (missing <em>Google Play Services</em>)
+         * so make sure to handle such cases in your code.</p>
+         */
+        public static function get advertisingId():String {
+            if( !isSupported ) return null;
+            validateExtensionContext();
+
+            return mContext.call( "getAdvertisingId" ) as String;
+        }
+
+        /**
+         * Retrieves whether the user has limit ad tracking enabled or not
+         */
+        public static function get isLimitedAdTracking():Boolean {
+            if( !isSupported ) return null;
+            validateExtensionContext();
+
+            return mContext.call( "getLimitedAdTracking" ) as Boolean;
+        }
+
+        /**
          * Version of the extension.
          */
         public static function get version():String {
