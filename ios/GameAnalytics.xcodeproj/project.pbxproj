@@ -11,8 +11,6 @@
 		C32C95BF1D02D7430014C335 /* AIRGameAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = C32C95BE1D02D7430014C335 /* AIRGameAnalytics.m */; };
 		C32C95C41D02D8CE0014C335 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32C95C21D02D8CE0014C335 /* AdSupport.framework */; };
 		C32C95C51D02D8CE0014C335 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32C95C31D02D8CE0014C335 /* SystemConfiguration.framework */; };
-		C32C95C71D02D8DA0014C335 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C32C95C61D02D8DA0014C335 /* libsqlite3.dylib */; };
-		C32C95C91D02D8E30014C335 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C32C95C81D02D8E30014C335 /* libz.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
 		C32C95CE1D030DEF0014C335 /* libGA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C32C95CD1D030DEF0014C335 /* libGA.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		C32C95D21D0313F30014C335 /* GameAnalyticsConfigHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C32C95D11D0313F30014C335 /* GameAnalyticsConfigHelper.m */; };
 		C32C95D51D032C990014C335 /* AddResourceEventFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C32C95D41D032C990014C335 /* AddResourceEventFunction.m */; };
@@ -44,8 +42,6 @@
 		C32C95BE1D02D7430014C335 /* AIRGameAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIRGameAnalytics.m; sourceTree = "<group>"; };
 		C32C95C21D02D8CE0014C335 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		C32C95C31D02D8CE0014C335 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		C32C95C61D02D8DA0014C335 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		C32C95C81D02D8E30014C335 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		C32C95CA1D030DA00014C335 /* GameAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameAnalytics.h; sourceTree = "<group>"; };
 		C32C95CD1D030DEF0014C335 /* libGA.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGA.a; sourceTree = "<group>"; };
 		C32C95D01D0313F30014C335 /* GameAnalyticsConfigHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameAnalyticsConfigHelper.h; path = Utils/GameAnalyticsConfigHelper.h; sourceTree = "<group>"; };
@@ -71,8 +67,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C32C95C91D02D8E30014C335 /* libz.dylib in Frameworks */,
-				C32C95C71D02D8DA0014C335 /* libsqlite3.dylib in Frameworks */,
 				C32C95C41D02D8CE0014C335 /* AdSupport.framework in Frameworks */,
 				C32C95CE1D030DEF0014C335 /* libGA.a in Frameworks */,
 				C32C95C51D02D8CE0014C335 /* SystemConfiguration.framework in Frameworks */,
@@ -136,8 +130,6 @@
 		C35331D51B7BCE8A003A7521 = {
 			isa = PBXGroup;
 			children = (
-				C32C95C81D02D8E30014C335 /* libz.dylib */,
-				C32C95C61D02D8DA0014C335 /* libsqlite3.dylib */,
 				C32C95C21D02D8CE0014C335 /* AdSupport.framework */,
 				C32C95C31D02D8CE0014C335 /* SystemConfiguration.framework */,
 				C3073AD51BE2C77C00EC89B7 /* GameAnalytics */,
@@ -272,7 +264,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos7.1;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -307,7 +299,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos7.1;
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
